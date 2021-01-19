@@ -23,14 +23,12 @@ import './style.scss';
   const currentMonth = todayProp.month;
   const currentYear = todayProp.year;
 
-  let arrOfDates = [];
   let week = 0;
 
   const setWeek = (date) => {
     const dt = date || today;
     const first = getDataProp(dt).firstDayOfWeek;
-
-    arrOfDates = [];
+    let arrOfDates = [];
 
     for ( let i = 0; i < 7; i++ ) {
       const nextDay = new Date(dt.setDate(first + i));
@@ -38,13 +36,13 @@ import './style.scss';
       arrOfDates.push(nextDay);
     };
 
-    renderWeek();
+    renderWeek(arrOfDates);
   };
 
-  const renderWeek = () => {
+  const renderWeek = (arr) => {
     weekWrap.innerHTML = '';
 
-    arrOfDates.forEach(el => {
+    arr.forEach(el => {
       const dt = getDataProp(el);
       const day = dt.day;
       const month = dt.month;
