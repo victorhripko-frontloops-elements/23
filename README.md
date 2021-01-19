@@ -1,21 +1,5 @@
-# Template for FrontLoops [Elements] challenge
+# Week
 
-Install all dependencies
-```bash
-npm i
-```
-
-For start watching all files use:
-```bash
-npm run start
-```
-
-then open in browser
-```bash
-http://localhost:1234/
-```
-
-For build all files use:
-```bash
-npm run build
-```
+Build a card displaying the current week days in a format {Month} {Date}.
+There should be controls to go to next/previous week.
+Today's date should displayed in bold.
